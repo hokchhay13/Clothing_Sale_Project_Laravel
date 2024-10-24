@@ -24,7 +24,7 @@
             <ul class="nav nav-secondary">
                 <li class="nav-item active">
                     <a href="{{ route('dashboard') }}"> 
-                    <i class="fas fa-home"></i>
+                    <i class="fa-solid fa-gauge-high"></i>
                     <p>Dashboard</p>
                     </a>
                 </li>
