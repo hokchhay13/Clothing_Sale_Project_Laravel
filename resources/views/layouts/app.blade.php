@@ -96,21 +96,8 @@
 
     <script>
         
-        @if (session('success'))
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: '{{ session('success') }}',
-                confirmButtonText: 'OK'
-            });
-        @elseif (session('error'))
-            Swal.fire({
-                icon: 'error',
-                title: 'Error!',
-                text: '{{ session('error') }}',
-                confirmButtonText: 'OK'
-            });
-        @endif
+        let successMessage = @json(session('success'));
+        let errorMessage = @json(session('error'));
 
         function updateDate() {
             const now = new Date();
