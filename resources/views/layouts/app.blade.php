@@ -95,6 +95,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+        
         @if (session('success'))
             Swal.fire({
                 icon: 'success',
@@ -113,10 +114,12 @@
 
         function updateDate() {
             const now = new Date();
+            
             let day = now.getDate().toString().padStart(1, '0');
             let month = (now.getMonth() + 1).toString().padStart(1, '0');
             let year = now.getFullYear();
             let date = `${day}-${month}-${year}`;
+            
             document.getElementById('date').textContent = `${date} `;
         }
         setInterval(updateTime, 1000);
@@ -128,31 +131,14 @@
             let hours = now.getHours().toString().padStart(1, '0');
             let minutes = now.getMinutes().toString().padStart(1, '0');
             let seconds = now.getSeconds().toString().padStart(1, '0');
-
-
             let time = `${hours}:${minutes}:${seconds}`;
+            
             document.getElementById('time').textContent = `${time} `;
         }
 
         setInterval(updateTime, 1000);
         updateTime()
 
-
-        // function showConfirmation() {
-        //     Swal.fire({
-        //         title: 'Are you sure?',
-        //         text: "You won't be able to revert this!",
-        //         icon: 'warning',
-        //         showCancelButton: true,
-        //         confirmButtonColor: '#3085d6',
-        //         cancelButtonColor: '#d33',
-        //         confirmButtonText: 'Yes, delete it!'
-        //     }).then((result) => {
-        //         if (result.isConfirmed) {
-        //             document.getElementById("yourFormId").submit();
-        //         }
-        //     });
-        // }
     </script>
 
 
